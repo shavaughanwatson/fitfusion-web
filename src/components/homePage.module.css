@@ -1,0 +1,50 @@
+.mainintro {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+  background-image: url(/src/assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.mainintrodesc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #1e1e1e;
+  font-style: italic;
+}
+
+.photo {
+  width: 650px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 375px) {
+  .mainintro {
+    flex-direction: column;
+    background-position: -26px;
+  }
+
+  .heading {
+    line-height: 1.2em;
+    font-size: 38px;
+  }
+  .photo {
+    width: 300px;
+  }
+
+  .mainintrophoto {
+    width: 370px;
+    display: flex;
+    justify-content: center;
+  }
+}

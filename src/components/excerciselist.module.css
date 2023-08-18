@@ -1,0 +1,54 @@
+.filtermenus {
+  grid-column: 1/2;
+  background: linear-gradient(89.08deg, #da7408 67.98%, #bf6607 99.14%);
+}
+
+.filteroptions {
+  overflow: auto;
+  height: 95vh;
+}
+
+.exerciseitem {
+  margin-top: 6px;
+}
+
+.excercise {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 4px;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+}
+.excercisePhoto {
+  width: 150px;
+}
+.excercisetitle {
+  color: whitesmoke;
+}
+
+.listheading {
+  background-color: #1e1e1e;
+  padding: 6px;
+}
+
+.heading {
+  color: whitesmoke;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: whitesmoke;
+  font-style: italic;
+}
+
+@media screen and (max-width: 375px) {
+  .filtermenus {
+    grid-column: 2/2;
+    height: 300px;
+    overflow: auto;
+    width: 375px;
+  }
+}

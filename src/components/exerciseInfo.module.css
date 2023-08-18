@@ -1,0 +1,101 @@
+.exercisedetailphoto {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  align-items: center;
+}
+
+.wrapper {
+  background-image: url(/src/assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exerciseinfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 12px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.description,
+.benefits {
+  margin-top: 6px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: #1e1e1e;
+  font-style: italic;
+}
+
+.muscledescription {
+  text-align: center;
+}
+.muscleimagetitle {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #1e1e1e;
+}
+
+.videolist {
+  height: 200px;
+}
+
+.videoheading {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1e1e1e;
+  font-style: italic;
+}
+
+.exercisevideos {
+  padding: 12px;
+}
+
+.video {
+  height: 150px;
+  width: 200px;
+}
+
+.videolist {
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
+  gap: 12px;
+  padding: 8px;
+  list-style: none;
+}
+
+.videotitle {
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 375px) {
+  .exerciseinfo {
+    padding: 0px;
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .exercisedetailphoto {
+    grid-column: 1fr;
+  }
+
+  .exerciseGIF {
+    width: 85%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 48px;
+  }
+}

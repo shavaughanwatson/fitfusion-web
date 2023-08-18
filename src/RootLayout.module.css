@@ -1,0 +1,23 @@
+.wrapper {
+  border: solid 1px rgb(37, 34, 179);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.child {
+  grid-column: 2/6;
+}
+
+@media screen and (max-width: 375px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .child {
+    grid-column: 2/3;
+    width: 373px;
+  }
+}
