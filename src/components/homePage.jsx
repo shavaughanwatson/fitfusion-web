@@ -6,7 +6,9 @@ function HomePage() {
     <div className={classes.mainintro}>
       <section className={classes.mainintrodesc}>
         <h2 className={classes.heading}>Welcome to FITHUB</h2>
-        <p>Here you can find videos on how to exercise and nutrition.</p>
+        <p className={classes.description}>
+          Here you can find videos on how to exercise and nutrition.
+        </p>
       </section>
 
       <section className={classes.mainintrophoto}>
