@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import ExerciseList from './components/excerciselist';
-
 import MainHeader from './components/mainHeader';
 import classes from './RootLayout.module.css';
 import { useState, useEffect } from 'react';
+import { createContext } from 'react';
+
+export const FitHubContext = createContext();
 
 function RootLayout() {
   const [excerciseList, setExerciseList] = useState([]);
+  const [isLoggedIn, setisLoggedIn] = useState(false); // Track user authentication state
   const [query, setQuery] = useState('');
 
   function handleQuery(e) {
@@ -29,20 +32,17 @@ function RootLayout() {
 
     const data = await response.json();
     console.log(data);
-    localStorage.setItem('exerciseList', JSON.stringify(data));
+
     setExerciseList(data);
   }
 
-  useEffect(() => {
-    const savedExerciseList = localStorage.getItem('exerciseList');
-
-    if (savedExerciseList) {
-      setExerciseList(JSON.parse(savedExerciseList));
-    }
-  }, []);
-
   return (
-    <>
+    <FitHubContext.Provider
+      value={{
+        loggedIn: isLoggedIn,
+        setLoggedIn: setisLoggedIn,
+      }}
+    >
       <MainHeader changeQuery={handleQuery} createList={createSearchList} />
       <div className={classes.body}>
         <ExerciseList list={excerciseList} />
@@ -50,7 +50,8 @@ function RootLayout() {
           <Outlet />
         </div>
       </div>
-    </>
+    </FitHubContext.Provider>
   );
 }
+
 export default RootLayout;

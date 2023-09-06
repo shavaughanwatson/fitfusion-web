@@ -1,6 +1,9 @@
 import classes from './exerciseInfo.module.css';
 import { useLoaderData } from 'react-router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { FaBookmark } from 'react-icons/fa';
+import { FitHubContext } from '../RootLayout';
+import axios from 'axios';
 
 function ExerciseInfo() {
   const exerciseInfo = useLoaderData();
@@ -8,8 +11,33 @@ function ExerciseInfo() {
 
   const [youtubeLinks, setyoutubeLinks] = useState([]);
 
+  const login = useContext(FitHubContext);
+
+  const addtoBookmark = async () => {
+    const exerciseInfoData = {
+      name: exerciseInfo.name,
+      gifUrl: exerciseInfo.gifUrl,
+    };
+
+    const response = await axios.post(
+      'http://localhost:3000/bookmark',
+      {
+        name: exerciseInfoData.name,
+        gifUrl: exerciseInfoData.gifUrl,
+      },
+      {
+        headers: {
+          Authorization: `${localStorage.getItem('token')}`, // Include the JWT token
+        },
+      }
+    );
+
+    console.log(response);
+  };
+
+  /*
   useEffect(() => {
-    async function fetchYoutubeLinks() {
+    const fetchYoutubeLinks = async () => {
       const response = await fetch(
         `https://www.googleapis.com/youtube/v3/search?key=AIzaSyCJHcde5WcNdHtiLWhbKNFP_pZXmF3Y4u0&type=video&part=snippet&q=${exerciseInfo.name}`
       );
@@ -23,10 +51,11 @@ function ExerciseInfo() {
       console.log(data);
       console.log(results);
       console.log(results.items);
-    }
+    };
 
     fetchYoutubeLinks();
   }, [exerciseInfo.name]);
+*/
 
   return (
     <>
@@ -34,6 +63,14 @@ function ExerciseInfo() {
         <div className={classes.exerciseinfo}>
           <section className={classes.exercisedetailphoto}>
             <h1 className={classes.title}>{exerciseInfo.name}</h1>
+
+            {login.loggedIn ? (
+              <button className={classes.bookmarkbtn} onClick={addtoBookmark}>
+                Add to Favorites <FaBookmark size={36} />
+              </button>
+            ) : (
+              ''
+            )}
           </section>
           <section className={classes.muscledescription}>
             <h1 className={classes.muscleimagetitle}>Muscles Worked</h1>
@@ -43,23 +80,24 @@ function ExerciseInfo() {
 
         <div className={classes.exercisevideos}>
           <h1 className={classes.videoheading}>Videos</h1>
-          <ul className={classes.videolist}>
-            {youtubeLinks.map(video => (
-              <li key={video.id.videoId} className={classes.videolink}>
-                <iframe
-                  className={classes.video}
-                  src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                ></iframe>
-                <p className={classes.videotitle}>{video.snippet.title}</p>
-              </li>
-            ))}
-          </ul>
+          <ul className={classes.videolist}></ul>
         </div>
       </div>
     </>
   );
 }
 
+/*
+{youtubeLinks.map(video => (
+  <li key={video.id.videoId} className={classes.videolink}>
+    <iframe
+      className={classes.video}
+      src={`https://www.youtube.com/embed/${video.id.videoId}`}
+    ></iframe>
+    <p className={classes.videotitle}>{video.snippet.title}</p>
+  </li>
+))}
+*/
 export async function loader({ params }) {
   const options = {
     method: 'GET',

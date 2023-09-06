@@ -1,0 +1,106 @@
+.SignUpPage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(89.08deg, #da7408 67.98%, #bf6607 99.14%);
+}
+
+.SignUpform {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginsubheading {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
+  color: whitesmoke;
+}
+
+.signupsubheading {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 85px;
+  color: whitesmoke;
+  font-style: italic;
+}
+
+.signininputs {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  width: 350px;
+}
+
+.ctabtn {
+  margin-top: 14px;
+  gap: 24px;
+  display: flex;
+}
+
+.logininput {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  width: 350px;
+}
+.inputs {
+  margin-top: 12px;
+}
+.logininput::placeholder {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
+  color: #4a443cdf;
+}
+
+.loginbtn {
+  background-color: #c21717;
+  color: whitesmoke;
+  width: 120px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+}
+
+.signupbtn {
+  background-color: #c21717;
+  color: whitesmoke;
+  width: 120px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.loginlabel {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
+  color: whitesmoke;
+}
+
+.highlight {
+  color: #c21717;
+}
+
+@media screen and (max-width: 375px) {
+  .loginPage {
+    flex-direction: column;
+    padding: 26px;
+  }
+
+  .loginimg {
+    width: 245px;
+  }
+
+  .loginsubheading {
+    font-size: 16px;
+  }
+
+  .loginheading {
+    font-size: 56px;
+  }
+
+  .logininput {
+    padding: 8px;
+
+    width: 350px;
+  }
+}

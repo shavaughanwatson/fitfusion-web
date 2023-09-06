@@ -10,6 +10,7 @@ import HomePage from './components/homePage';
 import './index.css';
 import RootLayout from './RootLayout';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
