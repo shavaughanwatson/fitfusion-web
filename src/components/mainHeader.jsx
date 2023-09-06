@@ -33,7 +33,7 @@ function MainHeader({ changeQuery, createList }) {
 
     try {
       // Make an async API request
-      const response = await axios.get('http://localhost:3000/bookmark', {
+      const response = await axios.get('https://fithub-app-8ab5.onrender.com/bookmark', {
         headers: {
           Authorization: `${localStorage.getItem('token')}`, // Include JWT token
         },

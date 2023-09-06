@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/auth'; // Update with your backend URL
+const API_URL = 'https://fithub-app-8ab5.onrender.com/auth'; // Update with your backend URL
 
 const authService = {
   login: async (email, password) => {

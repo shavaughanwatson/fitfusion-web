@@ -9,11 +9,14 @@ function BookmarkList({ list, setbookmark }) {
       const token = localStorage.getItem('token');
 
       // Make a DELETE request to delete a product
-      const response = axios.delete(`http://localhost:3000/bookmark/${id}`, {
-        headers: {
-          Authorization: `${token}`, // Include the JWT token
-        },
-      });
+      const response = axios.delete(
+        `https://fithub-app-8ab5.onrender.com/bookmark/${id}`,
+        {
+          headers: {
+            Authorization: `${token}`, // Include the JWT token
+          },
+        }
+      );
 
       // Optionally, you can handle the response or perform any necessary actions
       console.log(response);

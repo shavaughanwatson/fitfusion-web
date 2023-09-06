@@ -20,7 +20,7 @@ function ExerciseInfo() {
     };
 
     const response = await axios.post(
-      'http://localhost:3000/bookmark',
+      'https://fithub-app-8ab5.onrender.com/bookmark',
       {
         name: exerciseInfoData.name,
         gifUrl: exerciseInfoData.gifUrl,
