@@ -35,7 +35,6 @@ function ExerciseInfo() {
     console.log(response);
   };
 
-  /*
   useEffect(() => {
     const fetchYoutubeLinks = async () => {
       const response = await fetch(
@@ -55,7 +54,6 @@ function ExerciseInfo() {
 
     fetchYoutubeLinks();
   }, [exerciseInfo.name]);
-*/
 
   return (
     <>
@@ -87,17 +85,18 @@ function ExerciseInfo() {
   );
 }
 
-/*
-{youtubeLinks.map(video => (
-  <li key={video.id.videoId} className={classes.videolink}>
-    <iframe
-      className={classes.video}
-      src={`https://www.youtube.com/embed/${video.id.videoId}`}
-    ></iframe>
-    <p className={classes.videotitle}>{video.snippet.title}</p>
-  </li>
-))}
-*/
+{
+  youtubeLinks.map(video => (
+    <li key={video.id.videoId} className={classes.videolink}>
+      <iframe
+        className={classes.video}
+        src={`https://www.youtube.com/embed/${video.id.videoId}`}
+      ></iframe>
+      <p className={classes.videotitle}>{video.snippet.title}</p>
+    </li>
+  ));
+}
+
 export async function loader({ params }) {
   const options = {
     method: 'GET',
