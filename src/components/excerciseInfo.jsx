@@ -78,23 +78,21 @@ function ExerciseInfo() {
 
         <div className={classes.exercisevideos}>
           <h1 className={classes.videoheading}>Videos</h1>
-          <ul className={classes.videolist}></ul>
+          <ul className={classes.videolist}>
+            {youtubeLinks.map(video => (
+              <li key={video.id.videoId} className={classes.videolink}>
+                <iframe
+                  className={classes.video}
+                  src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                ></iframe>
+                <p className={classes.videotitle}>{video.snippet.title}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
   );
-}
-
-{
-  youtubeLinks.map(video => (
-    <li key={video.id.videoId} className={classes.videolink}>
-      <iframe
-        className={classes.video}
-        src={`https://www.youtube.com/embed/${video.id.videoId}`}
-      ></iframe>
-      <p className={classes.videotitle}>{video.snippet.title}</p>
-    </li>
-  ));
 }
 
 export async function loader({ params }) {
