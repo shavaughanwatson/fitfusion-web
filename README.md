@@ -22,6 +22,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 ### Getting Started
 
+#### Developers
 1. Fork the repository and create your branch:
    ```bash
    git checkout -b feature/your-feature
