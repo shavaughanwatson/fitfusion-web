@@ -38,14 +38,14 @@ We welcome and appreciate contributions from developers, UX designers, and marke
    We appreciate your contributions and look forward to collaborating with you to make Fithub even better!
 
 #### UX Designers, Marketers, Professional Business/Owners
-1. Navigate to the Issues Page:
+1. **Navigate to the Issues Page:**
 Visit the Issues Page on our GitHub repository.
 
-2. Create a New Issue:
+2. **Create a New Issue:**
 Click on the "New Issue" button.
 Choose the appropriate template if available (e.g., "Feature Request," "Bug Report," etc.).
 
-4. Provide Details:
+4. **Provide Details:**
 Clearly describe your thoughts, suggestions, or feedback.
 If you are a UX Designer or Marketer, consider attaching multimedia content such as:
 Wireframes
@@ -53,7 +53,7 @@ Prototypes
 Performance reports
 Business analysis documents
 
-5. Leave Comments:
+5. **Leave Comments:**
 Engage in discussions by leaving comments on existing issues.
 Discuss implementation details, share alternative ideas, or provide additional information.
 
