@@ -23,18 +23,17 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 ### Getting Started
 
 #### Developers
-1. Fork the repository and create your branch:
+1. **Fork the repository and create your branch:**
    ```bash
    git checkout -b feature/your-feature
  
-2. Make your changes and commit them:
+2. **Make your changes and commit them:**
    git commit -m 'Add a new feature or fix a bug'
 
-
-3. Push to your branch:
+3. **Push to your branch:**
   git push origin feature/your-feature
 
-4. Open a pull request to start the discussion and review process.
+4. **Open a pull request to start the discussion and review process.**
    We appreciate your contributions and look forward to collaborating with you to make Fithub even better!
 
 #### UX Designers, Marketers, Professional Business/Owners
