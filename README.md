@@ -38,7 +38,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 #### UX Designers, Marketers, Professional Business/Owners
 Test the app and share your feedback on what can be improved! You can navigate the web app by clicking on the link below:
-
+https://fithubapp.netlify.app/
 
 After playing around with the application follow the instructions below to share your opinion.
 
