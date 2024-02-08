@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import { useState, useEffect, useContext } from 'react';
 import { FaBookmark } from 'react-icons/fa';
 import { FitHubContext } from '../RootLayout';
+import { API_KEY } from '../services/config';
 import axios from 'axios';
 
 function ExerciseInfo() {
@@ -38,9 +39,9 @@ function ExerciseInfo() {
   useEffect(() => {
     const fetchYoutubeLinks = async () => {
       const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?key=AIzaSyCJHcde5WcNdHtiLWhbKNFP_pZXmF3Y4u0&type=video&part=snippet&q=${exerciseInfo.name}`
+        `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&q=${exerciseInfo.name}`
       );
-
+      console.log(API_KEY);
       const data = response.json();
 
       const results = await data;
