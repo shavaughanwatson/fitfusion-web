@@ -17,10 +17,11 @@ function RootLayout() {
   }
 
   async function createSearchList() {
+    /*
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'd1651994d7mshc9c5687f529368ap1fdccdjsn27d1b71f4a17',
+        'X-RapidAPI-Key': 'b3208b4854msh36f7e48218086fbp179d72jsn330f69a63ef7',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
       },
     };
@@ -30,6 +31,19 @@ function RootLayout() {
       options
     );
 
+    const data = await response.json();
+    console.log(data);
+*/
+    const url = `https://exercisedb.p.rapidapi.com/exercises/name/${query}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-key': 'b3208b4854msh36f7e48218086fbp179d72jsn330f69a63ef7',
+        'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
+      },
+    };
+
+    const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
 

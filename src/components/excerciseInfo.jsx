@@ -100,7 +100,7 @@ export async function loader({ params }) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'd1651994d7mshc9c5687f529368ap1fdccdjsn27d1b71f4a17',
+      'X-RapidAPI-Key': 'b3208b4854msh36f7e48218086fbp179d72jsn330f69a63ef7',
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
     },
   };
