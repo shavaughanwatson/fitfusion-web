@@ -33,11 +33,14 @@ function MainHeader({ changeQuery, createList }) {
 
     try {
       // Make an async API request
-      const response = await axios.get('https://fithub-app-8ab5.onrender.com/bookmark', {
-        headers: {
-          Authorization: `${localStorage.getItem('token')}`, // Include JWT token
-        },
-      });
+      const response = await axios.get(
+        'https://fithub-app-8ab5.onrender.com/bookmark',
+        {
+          headers: {
+            Authorization: `${localStorage.getItem('token')}`, // Include JWT token
+          },
+        }
+      );
 
       // Update the state with the data from the response
       console.log(response.data);
@@ -129,7 +132,7 @@ function MainHeader({ changeQuery, createList }) {
       <Modal
         isOpen={showBookmarkModal}
         onRequestClose={closeBookmarkModal}
-        contentLabel="Signup Modal"
+        contentLabel="Bookmark Modal"
         ariaHideApp={false}
       >
         <BookmarkList
